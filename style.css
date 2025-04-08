@@ -11,17 +11,18 @@
 
 @font-face {
   font-family: "Roboto-Regular";
-  src: url(./fonts/Roboto-Regular.ttf)
+  src: url(./fonts/Roboto-Regular.ttf);
 } 
 
 body {
   align-items:center;
+  font-family:"Roboto-Light";
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 
@@ -30,9 +31,7 @@ body {
   box-shadow: 2px 2px 2px grey;
 
   width: var(--width-form);
-  padding: 20px;
-
-  font-family:"Roboto-Light";
+  /* padding: 20px; * */
 }
 
 h1 {
@@ -40,6 +39,8 @@ h1 {
 
   font-family:"Roboto-Regular" ; 
   font-size: 28px;
+
+  margin-block-start: 20px;
 }
 
 h2 {
@@ -71,7 +72,9 @@ select {
   padding-right: 18px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 35px;
+  /* margin-top: 35px; */
+  margin-block-end: 20px;
+  margin-block-start: 35px;
 
   font-size: 12px;
   color: var(--btn_color);
@@ -121,3 +124,14 @@ select {
   text-transform: capitalize;
 }
 
+@media (width <= 400px) {
+  .form {
+    width: 320px;
+  }
+  .form__input {
+    width: 280px;
+  }
+  .paysystem {
+    width: 280px;
+   }
+}

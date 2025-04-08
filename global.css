@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: FeatureMono, Arial, sans-serif;
+  font-family: FeatureMono, Arial, sans-serif; 
   background-color: #f5f5f5;
 }
 
