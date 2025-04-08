@@ -132,4 +132,12 @@ select {
   .paysystem {
     width: 280px;
    }
+
+  .form__input-error_active {
+    max-width: 280px;
+  }
+  h2 {
+    font-size: 14px;
+    margin-top: 70px;
+  } 
 }
