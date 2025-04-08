@@ -1,0 +1,46 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: FeatureMono, Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+dl,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}

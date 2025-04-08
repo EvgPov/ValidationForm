@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form validaton</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <form class = "form" novalidate >
+    <h1>Регистрация</h1>
+    <label class = "label">
+      <h2 class = "h2">Имя:</h2>
+      <input type = "text"
+             id = "name-input"
+             class = "form__input"
+             minlength="2"
+             pattern="[a-zA-Zа-яА-ЯЁё\s]+"
+             title = "Только буквы"
+             placeholder="Имя"
+             required
+             data-message-error="Только буквы и пробелы, минимум 2 символа">
+             <span class = "name-input-error form__input-error"></span>
+             
+    </label>
+    <label class = "label">
+      <h2 class = "h2">Email:</h2>
+      <input type="email"
+             id = "email-input"
+             class = "form__input"
+             placeholder="user@domain.com"        
+             required
+             data-message-error="Ошибка ввода email">
+      <span class = "email-input-error form__input-error"></span>
+    </label>
+    <label class = "label">
+      <h2 class="paysystem-h2">Платёжная система:</h2>
+      <select name = "paysystem" 
+              id = "paysystem"
+              class = "paysystem"
+              required>
+        <option class = option disabled value="">Выберите платежную систему</option>
+        <option class = option value="mastercard" selected>Master card</option>
+        <option class = option value="visa">Visa</option>
+        <option class = option value="world">Мир</option>
+      </select>
+    </label>
+    <label class = "label">
+      <h2 class = "h2">Номер карты:</h2>
+      <input type="text"
+             id = "card-input"
+             class = "form__input"           
+             required
+             data-message-error="Длина номера карты не менее 16 цифр"
+             maxlength="19"
+             pattern="^\d{4}[\-\s\d]?\d{4}[\-\s\d]?\d{4}[\-\s\d]?\d{4}$"
+             placeholder="XXXX XXXX XXXX XXXX">
+      <span class = "card-input-error form__input-error"></span>
+    </label>
+     <button class = "form__submit btn">Зарегистрироваться</button>
+  </form>
+  <script src="https://unpkg.com/imask"></script>
+  <script src = "script.js"></script>
+</body>
+</html>
+
