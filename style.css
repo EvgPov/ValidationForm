@@ -107,8 +107,9 @@ select {
 .form__input-error_active {
   display: block;
   position: absolute;
-  max-width: 400px;
 
+  max-width: 400px;
+  
   font-size: 14px;
   color: red;
 }
@@ -124,20 +125,20 @@ select {
 
 @media (width <= 800px) {
   .form {
-    width: 320px;
+    width: 420px;
   }
   .form__input {
-    width: 280px;
+    width: 380px;
   }
   .paysystem {
-    width: 280px;
+    width: 380px;
    }
 
   .form__input-error_active {
-    max-width: 280px;
+    max-width: 380px;
   }
   h2 {
     font-size: 14px;
-    margin-top: 70px;
+    margin-top: 30px;
   } 
 }

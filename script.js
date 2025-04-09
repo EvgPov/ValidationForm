@@ -29,14 +29,15 @@ const isValid = (formElement, inputElement) => {
 const hasInvalidInput = (inputLst) => {
   return inputLst.some((inputItem) => !inputItem.validity.valid);
 }
-const toggleButtonsState = (inputList, buttonElement) => {
-  if (hasInvalidInput(inputList)) {
-      buttonElement.diabled = true;
-      buttonElement.classList.add("form__submit_disabled");
-  } else {
-      buttonElement.diabled = false;
-      buttonElement.classList.remove("form__submit_disabled");
-  }
+const toggleButtonsState = (inputList, buttonElement) => { 
+
+      if (hasInvalidInput(inputList)) {
+          buttonElement.diabled = true;
+          buttonElement.classList.add("form__submit_disabled");
+      } else {
+          buttonElement.diabled = false;
+          buttonElement.classList.remove("form__submit_disabled");
+      }
 }
 
 const setEventListeners = (formElement) => {
@@ -55,6 +56,7 @@ const setEventListeners = (formElement) => {
 
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(".form"));
+  
   formList.forEach(formItem => {
     setEventListeners(formItem);
   });

@@ -37,14 +37,15 @@
     <label class = "label">
       <h2 class="paysystem-h2">Платёжная система:</h2>
       <select name = "paysystem" 
-              id = "paysystem"
-              class = "paysystem"
+              id = "paysystem-input"
+              class = "form__input"
               required>
         <option class = option disabled selected value="">Выберите платежную систему</option>
         <option class = option value="mastercard">Master card</option>
         <option class = option value="visa">Visa</option>
         <option class = option value="world">Мир</option>
       </select>
+      <span class = "paysystem-input-error form__input-error"></span>
     </label>
     <label class = "label">
       <h2 class = "h2">Номер карты:</h2>
