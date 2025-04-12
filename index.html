@@ -29,9 +29,10 @@
       <input type="email"
              id = "email-input"
              class = "form__input"
+             pattern="([a-zA-Z0-9\-_\.]+@[a-zA-Z0-9\-_\.]+\.[a-zA-Z0-9\-_\.]+)"
              placeholder="user@domain.com"        
              required
-             data-message-error="Ошибка ввода email">
+             data-message-error="Формат email должен быть следующим: user@domain.com ">
       <span class = "email-input-error form__input-error"></span>
     </label>
     <label class = "label">
