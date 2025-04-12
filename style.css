@@ -44,7 +44,7 @@ h1 {
 
 h2 {
   font-size: 14px;
-  margin-top: 30px;
+  margin-block-start: 30px;
   margin-bottom: 5px;
 }
 
@@ -108,7 +108,6 @@ select {
   display: block;
   position: absolute;
 
-  /* max-width: scale(400px); */
   max-width: calc(var(--width-form) - 50px);
 
   font-size: 14px;
@@ -125,28 +124,21 @@ select {
 }
 
 @media (width <= 800px) {
-  /* .form {
-    width: 420px;
-  } */
 
-  /* .form__input {
-    width: 380px;
-  }
-   */
-   /* .form__input-error_active {
-    max-width: 380px;
-  }
-   */
   .form {
     width: 100svw;
   }
 
   .form__input {
-    width: calc(100svw - 40px);
+    width: 80svw;
   }
   .paysystem {
-    width: calc(100svw - 40px);
+    width: 80svw;
    }
+
+   h2 {
+    margin-block-start: 4svw;
+     }
 
   /* .form__input-error_active {
     max-width: 380px;
