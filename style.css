@@ -125,9 +125,14 @@ select {
 }
 
 @media (width <= 800px) {
-  .form {
+  /* .form {
     width: 420px;
+  } */
+
+  .form {
+    width: 100svw;
   }
+
   .form__input {
     width: 380px;
   }
