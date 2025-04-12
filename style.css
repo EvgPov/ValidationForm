@@ -138,21 +138,21 @@ select {
   }
    */
   .form {
-    width: 80svw;
+    width: 100svw;
   }
 
   .form__input {
-    width: calc(80svw - 20px);
+    width: calc(100svw - 40px);
   }
   .paysystem {
-    width: calc(80svw - 20px);
+    width: calc(100svw - 40px);
    }
 
-  .form__input-error_active {
+  /* .form__input-error_active {
     max-width: 380px;
-  }
-  h2 {
+  } */
+  /* h2 {
     font-size: 14px;
     margin-top: 30px;
-  } 
+  }  */
 }
