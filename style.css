@@ -127,6 +127,7 @@ select {
 
   .form {
     width: 100svw;
+    height: 100svh;
   }
 
   .form__input {
@@ -136,9 +137,9 @@ select {
     width: 80svw;
    }
 
-   h2 {
+   /* h2 {
     margin-block-start: 4svw;
-     }
+     } */
 
   /* .form__input-error_active {
     max-width: 380px;
