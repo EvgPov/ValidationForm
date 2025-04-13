@@ -132,7 +132,12 @@ select {
   .form__input {
     width: 80lvw;
   }
+
   .paysystem {
     width: 80lvw;
    }
+
+   .form__input-error_active {   
+      width: 80wv;
+    }
 }
