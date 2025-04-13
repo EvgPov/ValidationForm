@@ -126,15 +126,15 @@ select {
 @media (width <= 800px) {
 
   .form {
-    width: 100svw;
-    height: 100svh;
+    width: 100lvw;
+    height: 100lvh;
   }
 
   .form__input {
-    width: 80svw;
+    width: 80lvw;
   }
   .paysystem {
-    width: 80svw;
+    width: 80lvw;
    }
 
    /* h2 {
