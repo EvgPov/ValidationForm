@@ -21,8 +21,7 @@
              placeholder="Имя"
              required
              data-message-error="Только буквы и пробелы, минимум 2 символа">
-             <span class = "name-input-error form__input-error"></span>
-             
+             <span class = "name-input-error form__input-error"></span>        
     </label>
     <label class = "label">
       <h2 class = "h2">Номер телефона:</h2>
@@ -72,6 +71,14 @@
              placeholder="XXXX XXXX XXXX XXXX">
       <span class = "card-input-error form__input-error"></span>
     </label>
+    <label class = checkbox-input_label>
+      <input type="checkbox"
+              id="checkbox-input"
+              class ="form-input"
+              required>
+              <span class = checkbox-input_span> Нажимая на кнопку "Зарегистрироваться", 
+                      я даю согласие на обработку персональных данных </span>
+    </label>  
      <button class = "form__submit btn">Зарегистрироваться</button>
   </form>
   <script src="https://unpkg.com/imask"></script>

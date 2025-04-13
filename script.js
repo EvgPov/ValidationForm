@@ -29,12 +29,13 @@ const isValid = (formElement, inputElement) => {
 const hasInvalidInput = (inputLst) => {
   return inputLst.some((inputItem) => !inputItem.validity.valid);
 }
-const toggleButtonsState = (inputList, buttonElement) => { 
-
-      if (hasInvalidInput(inputList)) {
+const toggleButtonsState = (inputList, buttonElement, checkbox) => { 
+  
+      if (hasInvalidInput(inputList) || (!checkbox.checked)) {
           buttonElement.diabled = true;
           buttonElement.classList.add("form__submit_disabled");
-      } else {
+      }   
+      if (!hasInvalidInput(inputList) && (checkbox.checked)) {
           buttonElement.diabled = false;
           buttonElement.classList.remove("form__submit_disabled");
       }
@@ -43,16 +44,22 @@ const toggleButtonsState = (inputList, buttonElement) => {
 const setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".form__input"));
   const buttonElement = formElement.querySelector(".form__submit");
-
-  toggleButtonsState(inputList, buttonElement);
+  const checkbox =  formElement.querySelector("#checkbox-input");
+ 
+  toggleButtonsState(inputList, buttonElement, checkbox);
 
   inputList.forEach(inputElement => {
     inputElement.addEventListener('input', () => {
       isValid(formElement, inputElement);
-      toggleButtonsState(inputList, buttonElement);      
+      toggleButtonsState(inputList, buttonElement, checkbox);      
     });
   });
+  checkbox.addEventListener('change', () => {
+    // isValid(formElement, inputElement);
+    toggleButtonsState(inputList, buttonElement,checkbox);
+  })
 };
+
 
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(".form"));

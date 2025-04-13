@@ -122,6 +122,14 @@ select {
   text-transform: capitalize;
 }
 
+.checkbox-input_label {
+  display: flex;
+  align-items: baseline;
+  margin-block-start: 5px;  
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+}  
+
 @media (width <= 800px) {
 
   .form {
