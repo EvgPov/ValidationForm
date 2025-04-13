@@ -25,6 +25,18 @@
              
     </label>
     <label class = "label">
+      <h2 class = "h2">Номер телефона:</h2>
+      <input type="tel"
+             id = "phone-input"
+             class = "form__input"
+             maxlength="16"
+             pattern="^(\+7|8)[\(\s]?[0-9]{3}[\)\s\-]?[0-9]{3}[\-\s]?[0-9]{2}[\-\s]?[0-9]{2}$"
+             placeholder="+7(XXX) XXX-XX-XX"        
+             required
+             data-message-error="Только цифры, пробелы, +, - и ( ) : +7(XXX)XXX-XX-XX">
+      <span class = "phone-input-error form__input-error"></span>
+    </label>
+    <label class = "label">
       <h2 class = "h2">Email:</h2>
       <input type="email"
              id = "email-input"
@@ -32,7 +44,7 @@
              pattern="([a-zA-Z0-9\-_\.]+@[a-zA-Z0-9\-_\.]+\.[a-zA-Z0-9\-_\.]+)"
              placeholder="user@domain.com"        
              required
-             data-message-error="Email должен быть таким: user@domain.com ">
+             data-message-error="Email должен быть таким: user@domain.com">
       <span class = "email-input-error form__input-error"></span>
     </label>
     <label class = "label">

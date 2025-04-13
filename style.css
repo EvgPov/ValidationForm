@@ -1,7 +1,6 @@
 :root {
   --btn_color: #ffffff;
   --width-form: 500px;
-  /* --width-elements: 460px; */
 }  
 
 @font-face {
@@ -136,16 +135,4 @@ select {
   .paysystem {
     width: 80lvw;
    }
-
-   /* h2 {
-    margin-block-start: 4svw;
-     } */
-
-  /* .form__input-error_active {
-    max-width: 380px;
-  } */
-  /* h2 {
-    font-size: 14px;
-    margin-top: 30px;
-  }  */
 }

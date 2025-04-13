@@ -71,4 +71,15 @@ const enableValidation = () => {
 // }
 
 // maskNumberCard();
+
+// const maskNumberPhone = () => {
+//   const numberPhone = document.querySelector("#phone-input");
+//   const maskOption = {
+//     mask: "+7(000)000-00-00"
+//   };
+//   IMask(numberPhone, maskOption);
+// }
+
+// maskNumberPhone();
+
 enableValidation();
