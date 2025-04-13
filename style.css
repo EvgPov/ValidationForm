@@ -126,12 +126,7 @@ select {
 
   .form {
     width: 100lvw;
-    /* height: 100dvh; */
   }
-
-  /* h2 {
-    margin-block-start: 20px;
-  } */
 
   .form__input {
     width: 80lvw;
