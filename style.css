@@ -127,7 +127,7 @@ select {
 
   .form {
     width: 100lvw;
-    height: 100lvh;
+    height: 100svh;
   }
 
   .form__input {
