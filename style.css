@@ -146,7 +146,14 @@ select {
     width: 80lvw;
    }
 
-   .form__input-error_active {   
+  .form__input-error_active {   
       width: 80wv;
+    }
+
+  .btn {
+    display: flex;
+    margin: 0 auto;
+    margin-block-start: 35px;
+    margin-block-end: 20px;
     }
 }
