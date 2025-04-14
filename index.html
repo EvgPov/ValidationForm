@@ -47,7 +47,7 @@
       <span class = "email-input-error form__input-error"></span>
     </label>
     <label class = "label">
-      <h2 class="paysystem-h2">Платёжная система:</h2>
+      <h2 class="h2">Платёжная система:</h2>
       <select name = "paysystem" 
               id = "paysystem-input"
               class = "form__input"
@@ -81,6 +81,21 @@
     </label>  
      <button class = "form__submit btn">Зарегистрироваться</button>
   </form>
+  <div class = "popup">
+    <form class="popup__form" novalidate>
+      <h2 class = "popup__title">Введите код</h2>
+      <input 
+        type = "text"
+        class = "popup__input"
+        maxlength = "4"
+        minlength = "4"
+        size = "4"
+        pattern = "\d{4}"
+        placeholder="****"
+        required
+      />
+    </form>
+  </div>
   <script src="https://unpkg.com/imask"></script>
   <script src = "script.js"></script>
 </body>

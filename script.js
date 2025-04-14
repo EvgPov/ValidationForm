@@ -45,6 +45,7 @@ const setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".form__input"));
   const buttonElement = formElement.querySelector(".form__submit");
   const checkbox =  formElement.querySelector("#checkbox-input");
+  const popup = document.querySelector(".popup");
  
   toggleButtonsState(inputList, buttonElement, checkbox);
 
@@ -55,11 +56,19 @@ const setEventListeners = (formElement) => {
     });
   });
   checkbox.addEventListener('change', () => {
-    // isValid(formElement, inputElement);
     toggleButtonsState(inputList, buttonElement,checkbox);
   })
-};
 
+  buttonElement.addEventListener('click', (event) => {
+    const popup__input = document.querySelector(".popup__input");
+    event.preventDefault();
+    popup.classList.add("popup_opened");
+
+    popup__input.addEventListener('input', (evt) => {
+      if(popup__input.value.length === 4) formElement.submit();
+    })
+  })
+};
 
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(".form"));
@@ -68,6 +77,8 @@ const enableValidation = () => {
     setEventListeners(formItem);
   });
 };
+
+
 
 // const maskNumberCard = () => {
 //   const numberCard = document.querySelector("#card-input");
