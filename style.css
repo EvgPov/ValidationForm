@@ -124,16 +124,18 @@ select {
 
 .checkbox-input_label {
   display: flex;
+  width: calc(var(--width-form) - 40px);
   align-items: baseline;
-  margin-block-start: 5px;  
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
+  margin-block-start: 20px;  
 }  
 
 @media (width <= 800px) {
 
   .form {
     width: 100lvw;
+    display: block;
+    padding-inline-start: 65px;
+    padding-inline-end: 65px;
   }
 
   .form__input {
