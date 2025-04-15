@@ -29,6 +29,7 @@ const isValid = (formElement, inputElement) => {
 const hasInvalidInput = (inputLst) => {
   return inputLst.some((inputItem) => !inputItem.validity.valid);
 }
+
 const toggleButtonsState = (inputList, buttonElement, checkbox) => { 
   
       if (hasInvalidInput(inputList) || (!checkbox.checked)) {
@@ -47,32 +48,45 @@ const setEventListeners = (formElement) => {
   const checkbox =  formElement.querySelector("#checkbox-input");
   const popup = document.querySelector(".popup");
  
-  toggleButtonsState(inputList, buttonElement, checkbox);
+  if (buttonElement !== null && checkbox !== null) {
+    toggleButtonsState(inputList, buttonElement, checkbox);
+  }  
 
   inputList.forEach(inputElement => {
     inputElement.addEventListener('input', () => {
       isValid(formElement, inputElement);
-      toggleButtonsState(inputList, buttonElement, checkbox);      
+      if (buttonElement !== null && checkbox !== null) {
+        toggleButtonsState(inputList, buttonElement, checkbox);  
+      }      
     });
   });
-  checkbox.addEventListener('change', () => {
-    toggleButtonsState(inputList, buttonElement,checkbox);
-  })
-
-  buttonElement.addEventListener('click', (event) => {
-    const popup__input = document.querySelector(".popup__input");
-    event.preventDefault();
-    popup.classList.add("popup_opened");
-
-    popup__input.addEventListener('input', (evt) => {
-      if(popup__input.value.length === 4) formElement.submit();
+  if (buttonElement !== null && checkbox !== null) {
+    checkbox.addEventListener('change', () => {    
+      toggleButtonsState(inputList, buttonElement,checkbox); 
     })
-  })
+  }
+  if (buttonElement !== null) {
+    buttonElement.addEventListener('click', (event) => {
+      const popup__input = document.querySelector(".popup__input");
+      event.preventDefault();
+      popup.classList.add("popup_opened");
+
+      popup__input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') event.preventDefault(); 
+      });
+
+      popup__input.addEventListener('input', () => {  
+        if (popup__input.value.length === 4 && popup__input.validity.valid) {
+          formElement.submit();
+        } 
+      })
+    })
+  }  
 };
 
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(".form"));
-  
+ 
   formList.forEach(formItem => {
     setEventListeners(formItem);
   });

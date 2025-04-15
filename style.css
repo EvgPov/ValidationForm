@@ -4,6 +4,7 @@
   --accent-color: #136ef6;
   --gray-color: #dedede;
   --width-form: 500px;
+  --width-popup-form: 240px;
 }  
 
 @font-face {
@@ -152,13 +153,15 @@ select {
 }
 
 .popup__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
+  display: block;
+  width: var(--width-popup-form);
+  height: 120px;
+
+  padding: 20px 20px;
+
   border-radius: 3px;
   
+
   background-color: var(--background-color);
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
@@ -166,25 +169,32 @@ select {
 .popup__title {
   font-family: "Roboto-Regular";
   font-size: 20px;
-
-  padding: 10px;
+  
+  text-align: center;
+  
+  padding-block-end: 3px;
 }
 
 .popup__input {
-  padding: 0 10px;
-  height: 40px;
+  padding: 0 20px;
+  margin-block-start: 10px;
+  margin-block-end: 5px;
+
+  height: 30px;
+  width: calc(var(--width-popup-form) - 40px); 
+
   background-color: transparent;
   border: none;
   border-block-end: 1px solid var(--gray-color);
 }
 
-.popup__input:focus-visible {
+/* .popup__input:focus-visible {
   outline: 2px solid var(--accent-color);
-}
+} */
 
-.popup__input:last-of-type {
-  margin-block-end: 30px;
-}
+/* .popup__input:last-of-type {
+  margin-block-end: 10px;
+} */
 
 @media (width <= 800px) {
 
@@ -214,8 +224,22 @@ select {
     margin-block-end: 20px;
     }
 
-    .checkbox-input_label {
-      width: 80lvw;
-    }  
-    
+  .checkbox-input_label {
+    width: 80lvw;
+  }
+  
+  .popup__form {
+    display: block;
+    width: var(--width-popup-form);
+    height: 120px;
+  
+    padding: 20px 20px;
+  }
+
+  .popup__input {
+    height: 30px;
+    width: calc(var(--width-popup-form) - 40px); 
+  }
+  
+  
 }
